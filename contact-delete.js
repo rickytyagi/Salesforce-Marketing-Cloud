@@ -46,12 +46,12 @@ try
 	Platform.Response.Write("<br /><br />" + "\n\n payload: " + payload);
 
     var deleteEndpoint = restUrl + "contacts/v1/contacts/actions/delete?type=listReference";
-Write("<br /><br />" + "\n\n deleteEndpoint, contentType, payload, headerNames, headerValues: " + deleteEndpoint);
+Write("<br /><br />" + "\n\n deleteEndpoint: " + deleteEndpoint);
     var result = HTTP.Post(deleteEndpoint, contentType, payload, headerNames, headerValues);
-	Platform.Response.Write("<br /><br />" + "\n\n postsubmitted: ");
+Write("<br /><br />" + "\n\n postsubmitted: ");
     result = Stringify(result);
 Write("<br /><br />" + "\n\n postResult: ");
-    Platform.Response.Write("<br /><br />" + "\n\n result: " + result);
+Write("<br /><br />" + "\n\n result: " + result);
 
     var success = "Success: " + result;
     writeErrorLog(success);
