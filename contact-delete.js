@@ -47,7 +47,7 @@ try
 
     var deleteEndpoint = restUrl + "contacts/v1/contacts/actions/delete?type=listReference";
 Write("<br /><br />" + "\n\n delete endpoint url: " + deleteEndpoint);
-    var result = HTTP.Post(deleteEndpoint, contentType, headerNames, headerValues, payload);
+    var result = HTTP.Post(deleteEndpoint, contentType, payload, headerNames, headerValues);
 	Platform.Response.Write("<br /><br />" + "\n\n postsubmitted: ");
     result = Stringify(result);
 Write("<br /><br />" + "\n\n postResult: ");
