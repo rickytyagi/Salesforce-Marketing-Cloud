@@ -4,7 +4,7 @@ try
 {
 
 	var eid = Platform.Function.AuthenticatedEnterpriseID();
-	var deKey = 'QueryStudioResults at 2020-10-21T1444460000';
+	var deKey = '9BA79B0F-E4E8-4EA8-97E0-D2721CEFBCC4';
 	var clientId = '3q2pu090gtlizkysqjz7un23';
 	var clientSecret = 'Z8KCpkESjRWvNzWKal7SiUko';
 	var authBaseUrl = 'https://mcx59fk7tyvcfc-t9j-xjkybxtv0.auth.marketingcloudapis.com/';
