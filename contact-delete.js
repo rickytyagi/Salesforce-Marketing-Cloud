@@ -44,6 +44,8 @@ try
     payload += '   "deleteListContentsWhenCompleted":true';
     payload += '}';
 	Platform.Response.Write("<br /><br />" + "\n\n payload: " + payload);
+	Platform.Response.Write("<br /><br />" + "\n\n HeaderNames: " + headerNames);
+	Platform.Response.Write("<br /><br />" + "\n\n headerValues: " + headerValues);
 
     var deleteEndpoint = restUrl + "contacts/v1/contacts/actions/delete?type=listReference";
 Write("<br /><br />" + "\n\n deleteEndpoint: " + deleteEndpoint);
