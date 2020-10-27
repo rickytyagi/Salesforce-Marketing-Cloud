@@ -85,10 +85,10 @@
        <option value="Name">Name</option>      
        <option value="CustomerKey">External Key</option>
       </select>
-       equals
+       <textarea>equals</textarea>
       <input type="text" name="DEval" value="" maxlength="128"><br>
       <input type="submit" value="Submit">
-    </form><br><b>Folder path: </b>  
+    </form><br><textarea>Folder path: </textarea>  
     <script runat="server">
     Platform.Load("core","1.1.5");  
     var DEprop = Request.GetQueryStringParameter("DEprop");
@@ -108,7 +108,7 @@
         }
     };
     path(FolderID);
-    Write(list.join("> "));
+    Write(list.join(" > "));
     </script>
     </td></tr></table>
     
