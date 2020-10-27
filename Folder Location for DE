@@ -1,33 +1,114 @@
-<table style="padding: 20px;"><tr><td>
-<b>How would you like to identify the Data Extension?</b><br>
-<form action="%%=RequestParameter('PAGEURL')=%%" method="post">
-  <select name="DEprop">
-   <option value="Name">Name</option>      
-   <option value="CustomerKey">External Key</option>
-  </select>
-   equals
-  <input type="text" name="DEval" value="" maxlength="128"><br>
-  <input type="submit" value="Submit">
-</form><br><b>Folder path: </b>  
-<script runat="server">
-Platform.Load("core","1.1.5");  
-var DEprop = Request.GetQueryStringParameter("DEprop");
-var DEval = Request.GetQueryStringParameter("DEval");
-var FindDE = DataExtension.Retrieve({Property:DEprop,SimpleOperator:"equals",Value:DEval});
-var FolderID = FindDE[0].CategoryID;
-var DEname = FindDE[0].Name;
-var list = [];
-  list.push(DEname);
-var path = function(id) {
-    if (id> 0) {
-        var results = Folder.Retrieve({Property:"ID",SimpleOperator:"equals",Value:id});
-    list.unshift(results [0].Name);
-        return path(results[0].ParentFolder.ID);
-    } else {
-        return id;
+<style type="text/css">
+    table.center {
+        margin-left:auto; 
+        margin-right:auto;
+      }
+    .form-style-5{
+        max-width: 500px;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        margin: 10px auto;
+        padding: 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+        font-family: Georgia, "Times New Roman", Times, serif;
     }
-};
-path(FolderID);
-Write(list.join("> "));
-</script>
-</td></tr></table>
+    fieldset{
+        border: none;
+    }
+    legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input[type="text"],
+    textarea,
+    select {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: rgba(255,255,255,.1);
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        margin: 0;
+        outline: 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        background-color: #e8eeef;
+        color:#8a97a0;
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px;
+    }
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus{
+        background: #d2d9dd;
+    }
+    select{
+        -webkit-appearance: menulist-button;
+        height:35px;
+    }
+
+    input[type="submit"],
+    input[type="button"]
+    {
+        position: relative;
+        display: block;
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        margin: 0 auto;
+        background: #1abc9c;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        width: 100%;
+        border: 1px solid #16a085;
+        border-width: 1px 1px 3px;
+        margin-bottom: 10px;
+    }
+    input[type="submit"]:hover,
+    input[type="button"]:hover
+    {
+        background: #109177;
+    }
+    </style>
+    <table class="center" style="padding: 20px;"><tr><td>
+        <legend>How would you like to identify the Data Extension?</legend><br>
+    <form action="%%=RequestParameter('PAGEURL')=%%" method="post">
+      <select name="DEprop">
+       <option value="Name">Name</option>      
+       <option value="CustomerKey">External Key</option>
+      </select>
+       equals
+      <input type="text" name="DEval" value="" maxlength="128"><br>
+      <input type="submit" value="Submit">
+    </form><br><b>Folder path: </b>  
+    <script runat="server">
+    Platform.Load("core","1.1.5");  
+    var DEprop = Request.GetQueryStringParameter("DEprop");
+    var DEval = Request.GetQueryStringParameter("DEval");
+    var FindDE = DataExtension.Retrieve({Property:DEprop,SimpleOperator:"equals",Value:DEval});
+    var FolderID = FindDE[0].CategoryID;
+    var DEname = FindDE[0].Name;
+    var list = [];
+      list.push(DEname);
+    var path = function(id) {
+        if (id> 0) {
+            var results = Folder.Retrieve({Property:"ID",SimpleOperator:"equals",Value:id});
+        list.unshift(results [0].Name);
+            return path(results[0].ParentFolder.ID);
+        } else {
+            return id;
+        }
+    };
+    path(FolderID);
+    Write(list.join("> "));
+    </script>
+    </td></tr></table>
+    
