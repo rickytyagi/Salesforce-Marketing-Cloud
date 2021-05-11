@@ -1,1 +1,99 @@
-Test
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-wrapper camarker-inner">
+<form id="smartcapture-block-i75oxo7mbv" class="smartcapture-content-wrapper fuelux" novalidate="novalidate">
+ 
+<style id="smartcapture-styles-i75oxo7mbv">
+ #smartcapture-block-i75oxo7mbv {
+  background-color:transparent;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;text-align:left;
+ }
+
+ #smartcapture-block-i75oxo7mbv .smartcapture-controls {
+  padding-bottom: 10px;
+ }
+
+ #smartcapture-block-i75oxo7mbv .smartcapture-controls .sc-formfield-label,
+ #smartcapture-block-i75oxo7mbv .smartcapture-controls .sc-formfield-label label,
+ #smartcapture-block-i75oxo7mbv .smartcapture-controls .sc-formfield-input label {
+  color:#000000;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:inherit;margin-bottom:3px;vertical-align:middle;
+ }
+
+ #smartcapture-block-i75oxo7mbv input[type="radio"],
+ #smartcapture-block-i75oxo7mbv input[type="checkbox"] {
+  margin: 0 0.4em 3px 0;
+  vertical-align: middle;
+ }
+
+ #smartcapture-block-i75oxo7mbv input[type="text"],
+ #smartcapture-block-i75oxo7mbv input[type="email"],
+ #smartcapture-block-i75oxo7mbv input[type="number"] {
+  width:200px;
+ }
+
+ #smartcapture-block-i75oxo7mbv .sc-button {
+  background-color:#009DDC;border-color:#009DDC;border-radius:3px;border-style:solid;-webkit-border-radius:3px;-moz-border-radius:3px;color:#FFFFFF;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:normal;padding:10px;
+ }
+
+ #smartcapture-block-i75oxo7mbv .smartcapture-submit-button-wrapper {
+  padding-bottom:10px;text-align:center;
+ }
+
+ #smartcapture-block-i75oxo7mbv .date-dropdown-select-boxes input {
+  display: none;
+ }
+
+ #smartcapture-block-i75oxo7mbv .date-dropdown-select-boxes .select {
+  max-height: 28em;
+  max-width: 6em;
+  overflow: auto;
+ }
+</style>
+
+ <div data-type="slot" data-key="cnf683p28w8"></div>
+ <div class="smartcapture-submit-button-wrapper">
+  <button type="submit" class="sc-button">Submit</button>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script id="smartcapture-script-i75oxo7mbv">
+ var scFormLoaded = function () {
+  window.ScForm.init({"gearID":"i75oxo7mbv","smartCaptureFormID":0,"sourceKey":"B238C46E-60CE-4BEF-AA97-823DDA32350F","source":"dataExtension","triggeredSend":"","confirmationMessage":"<b>Thank you for your submission.</b><br />\n&nbsp;","buttonText":"Submit","formStyling":{"background-color":"transparent","margin-top":"0px","margin-right":"0px","margin-bottom":"0px","margin-left":"0px","padding-top":"0px","padding-right":"0px","padding-bottom":"0px","padding-left":"0px","text-align":"left"},"fieldStyling":{"width":"200px"},"buttonStyling":{"background-color":"#009DDC","border-color":"#009DDC","border-radius":"3px","border-style":"solid","-webkit-border-radius":"3px","-moz-border-radius":"3px","color":"#FFFFFF","font-family":"Arial, Helvetica, sans-serif","font-size":"16px","line-height":"normal","padding":"10px"},"onSubmitGotoUrlType":2});
+ };
+ window.appDomain = window.appDomain || '<ctrl:eval>Platform.Variable.GetValue("@appDomain")||""</ctrl:eval>';
+ window.contentDetail = window.contentDetail || <ctrl:eval>Platform.Variable.GetValue('@contentDetail')||{}</ctrl:eval>;
+ if (!window.ScForm || !window.ScForm.init) {
+  var head = document.getElementsByTagName('head')[0];
+  var id = 'smartcapture-formjs-script';
+  var script = document.getElementById(id);
+  var domain = window.appDomain;
+  var el;
+  if (!script) {
+   if (domain) {
+    domain = '//' + domain;
+   }
+   el = document.createElement('script');
+   el.async = true;
+   el.id = id;
+   el.src = domain + '/CloudPages/lib/smartcapture-formjs.js';
+   el.onload = scFormLoaded;
+   head.appendChild(el);
+  } else {
+   if (script.addEventListener) {
+    script.addEventListener('load', scFormLoaded);
+   } else if (script.attachEvent) {
+    script.attachEvent('onload', scFormLoaded);
+   }
+  }
+ } else {
+  scFormLoaded();
+ }
+</script>
+
+</form>
+</td></tr></table>
